@@ -1,0 +1,29 @@
+include ../../../../node_modules/bemto.pug/bemto
+
++b.SECTION.modal-home._temperature(class="zoomInLeft")
+    +e.transparent-wrapper
+        +e.header
+            +e.flex-wrapper
+                +e.H2.title Elgato Eve Degree Connected
+                +e.SMALL.status Включено
+            +e.gadget-state
+                +e.B.temperature +23
+                +e.SVG.icon(width="24" height="24")
+                    use(xlink:href="#icon_sun")
+        +e.UL.mode-list
+            +e.LI.mode-item
+                +e.BUTTON.mode-button._current(type="button") Вручную
+            +e.LI.mode-item
+                +e.BUTTON.mode-button(type="button") Холодно
+            +e.LI.mode-item
+                +e.BUTTON.mode-button(type="button") Тепло
+            +e.LI.mode-item
+                +e.BUTTON.mode-button(type="button") Жарко
+        +e.range-wrapper
+            +e.SPAN.sunlight._min._offset_top(width="24" height="24") -10
+            +e.SPAN.sunlight._max._offset_top(width="24" height="24") +30
+            +e.INPUT.range-input._temperature(type="range" name="range" id="range" min="1" max="100")
+    +e.controls
+        +e.BUTTON.control-button._submit(type="button") Применить
+            +e.BUTTON.control-button._close(type="button") Закрыть
+

@@ -1,0 +1,59 @@
+@import ../global/mixins
+@import ../global/theme
+
+.page-footer
+    display: flex
+    min-height: 64px
+    box-sizing: border-box
+    padding: 40px
+    margin-top: auto
+    align-items: center
+
+.page-footer__info-list
+    @include offset
+    display: grid
+
+.page-footer__info-item
+    @include offset
+    list-style: none
+    margin-right: 20px
+
+    &:last-child
+        margin-right: 0
+
+.page-footer__info-link
+    color: #858585
+
+.page-footer__copyright
+    color: #858585
+
+@include rmin($mobile-width)
+
+    .page-footer
+        flex-direction: column
+
+    .page-footer__info-list
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        grid-gap: 20px
+
+    .page-footer__copyright
+        margin: 20px 0
+        text-align: center
+
+@include rmin($desktop-width)
+    .page-footer
+        flex-direction: row
+
+    .page-footer__info-list
+        grid-auto-flow: column
+        grid-template-columns: none
+        grid-template-rows: none
+
+    .page-footer__info-item
+        flex-basis: initial
+
+    .page-footer__copyright
+        margin-top: 0
+        margin-bottom: 0
+        margin-left: auto

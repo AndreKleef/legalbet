@@ -1,0 +1,47 @@
+include ../../../../node_modules/bemto.pug/bemto
+
++b.main-info
+    +e.H2.title(class="title_medium") Главное
+    +e.ARTICLE.section
+        +e.left-section
+            +e.B.welcome-text Привет, Геннадий
+            +e.P.info-text Двери и окна закрыты, сигнализация включена
+            +e.UL.info-list
+                +e.LI.info-item
+                    +e.item-wrapper
+                        small Дома
+                        b +23
+                +e.LI.info-item
+                    +e.item-wrapper
+                        small За окном
+                        b +19
+                    +e.SVG.info-icon(width="17" height="17" fill="transparent")
+                        use(xlink:href="#cloud-drizzle")
+        +e.right-section
+            +e.UL.gadget-info-list
+                +e.LI.gadget-info-item.card-item
+                    +e.gadget-icon-wrapper
+                        +e.SVG.gadget-icon(width="24" height="24")
+                            use(xlink:href="#icon_temperature")
+                    +e.H4.gadget-name Philips Cooler
+                    +e.SMALL.gadget-info-time Начнет охлаждать в 16:30
+                +e.LI.gadget-info-item.card-item
+                    +e.gadget-icon-wrapper
+                        +e.SVG.gadget-icon(width="24" height="24")
+                            use(xlink:href="#icon_sun")
+                    +e.H4.gadget-name Xiaomi Yeelight LED Smart Bulb
+                    +e.SMALL.gadget-info-time Включится в 17:00
+                +e.LI.gadget-info-item.card-item
+                    +e.gadget-icon-wrapper
+                        +e.SVG.gadget-icon(width="24" height="24")
+                            use(xlink:href="#icon_sun")
+                    +e.H4.gadget-name Xiaomi Yeelight LED Smart Bulb
+                    +e.SMALL.gadget-info-time Включится в 17:00
+                +e.LI.gadget-info-item.card-item
+                    +e.gadget-icon-wrapper
+                        +e.SVG.gadget-icon(width="24" height="24")
+                            use(xlink:href="#icon_sun")
+                    +e.H4.gadget-name Xiaomi Yeelight LED Smart Bulb
+                    +e.SMALL.gadget-info-time Включится в 17:00
+            +e.SPAN.svg-arrow
+                +e.IMG.image(src="images/M@2x.png" width="16" height="16")

@@ -1,0 +1,49 @@
+@import ../global/mixins
+@import ../global/theme
+
+.controls-panel
+
+.controls-panel__control-button
+    @include offset
+    border: 0
+    background: none
+    font-size: 0
+    width: 16px
+    position: relative
+    height: 16px
+    cursor: pointer
+
+    &:hover
+        &::before
+            background-color: $color-brand
+        &::after
+            background-color: $color-brand
+
+    &::before
+        position: absolute
+        content: ''
+        width: 2px
+        height: 12px
+        top: 5px
+        background-color: #a7a7a7
+        transform: rotate(45deg)
+
+    &::after
+        position: absolute
+        content: ''
+        width: 2px
+        height: 12px
+        bottom: 6px
+        background-color: #a7a7a7
+        transform: rotate(-45deg)
+
+    &_left
+        transform: rotate(180deg)
+        margin-right: 15px
+
+        &::before
+            top: 6px
+            bottom: 7px
+
+    &_right
+        transform: rotate(0)

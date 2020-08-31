@@ -1,0 +1,50 @@
+{
+  "name": "mstart",
+  "version": "1.3.0",
+  "description": "Boilerplate for frontend.",
+  "sasslintConfig": ".sass-lint.yaml",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "./node_modules/gulp/bin/gulp.js",
+    "sasslint": "./node_modules/gulp/bin/gulp.js sasslint",
+    "start": "gulp default"
+  },
+  "pre-commit": [
+    "sasslint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolamarkelov/mstart.git"
+  },
+  "author": "Nikola Markelov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikolamarkelov/mstart/issues"
+  },
+  "homepage": "https://github.com/nikolamarkelov/mstart#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "bemto.pug": "2.1.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-lint": "^1.3.4",
+    "gulp-svg-sprite": "^1.3.7",
+    "gulp-uglifyjs": "^0.6.2",
+    "pre-commit": "^1.2.2",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^2.0.0"
+  }
+}

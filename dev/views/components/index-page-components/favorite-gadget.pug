@@ -1,0 +1,159 @@
+include ../../../../node_modules/bemto.pug/bemto
+
++b.SECTION.favorite-gadget
+    +e.HEADER.header
+        +e.H2.title(class="title_medium") Избранные устройства
+        +e.UL.nav-list
+            +e.LI.nav-item
+                +e.BUTTON.nav-button._current(type="button" data-type="all") Все
+            +e.LI.nav-item
+                +e.BUTTON.nav-button(type="button" data-type="kitchen") Кухня
+            +e.LI.nav-item
+                +e.BUTTON.nav-button(type="button" data-type="hall") Зал
+            +e.LI.nav-item
+                +e.BUTTON.nav-button(type="button" data-type="lamp") Лампочки
+            +e.LI.nav-item
+                +e.BUTTON.nav-button(type="button" data-type="camera") Камеры
+        +e.SELECT.nav-mobile-select
+            +e.OPTION.nav-option(selected value="all") Все
+            +e.OPTION.nav-option(value="kitchen") Кухня
+            +e.OPTION.nav-option(value="hall") Зал
+            +e.OPTION.nav-option(value="lamp") Лампочки
+            +e.OPTION.nav-option(value="camera") Камеры
+        +b.controls-panel.favorite-gadget__controls
+            +e.BUTTON.control-button._left#gadget-left(type="button") Листать влево
+            +e.BUTTON.control-button._right#gadget-right(type="button") Листать вправо
+    +e.UL.list
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="Xiaomi YeeLight LED Smart Bulb"
+            data-gadget-status="Включено"
+            data-gadget-type="light"
+            data-gadget="kitchen")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun_2")
+                +e.P.item-text Xiaomi Yeelight LED Smart Bulb
+                +e.SMALL.clarify-text Включено
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="D-Link Omna 180 Cam"
+            data-gadget-status="Включится в 17:00"
+            data-gadget-type="light"
+            data-gadget="kitchen")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun")
+                +e.P.item-text D-Link Omna 180 Cam
+                +e.SMALL.clarify-text Включится в 17:00
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="Elgato Eve Degree Connected"
+            data-gadget-status="Выключено до 17:00"
+            data-gadget-type="temperature"
+            data-gadget="camera")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_temperature")
+                +e.P.item-text Elgato Eve Degree Connected
+                +e.SMALL.clarify-text Выключено до 17:00
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="LIFX Mini Day & Dusk A60 E27"
+            data-gadget-status="Выключится в 17:00"
+            data-gadget-type="floor"
+            data-gadget="hall")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun")
+                +e.P.item-text LIFX Mini Day & Dusk A60 E27
+                +e.SMALL.clarify-text Выключится в 17:00
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="Xiaomi Mi Air Purifier 2S"
+            data-gadget-status="Включено"
+            data-gadget-type="floor"
+            data-gadget="hall")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun_2")
+                +e.P.item-text Xiaomi Mi Air Purifier 2S
+                +e.SMALL.clarify-text Включено
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="Phillips Zhirui"
+            data-gadget-status="Выключено"
+            data-gadget-type="temperature"
+            data-gadget="hall")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun")
+                +e.P.item-text Phillips Zhirui
+                +e.SMALL.clarify-text Выключено
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="D-Link Omna 180 Cam"
+            data-gadget-status="Включится в 17:00"
+            data-gadget-type="light"
+            data-gadget="lamp")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun")
+                +e.P.item-text D-Link Omna 180 Cam
+                +e.SMALL.clarify-text Включится в 17:00
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="Elgato Eve Degree Connected"
+            data-gadget-status="Выключено до 17:00"
+            data-gadget-type="temperature"
+            data-gadget="lamp")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_temperature")
+                +e.P.item-text Elgato Eve Degree Connected
+                +e.SMALL.clarify-text Выключено до 17:00
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="LIFX Mini Day & Dusk A60 E27"
+            data-gadget-status="Выключится в 17:00"
+            data-gadget-type="light"
+            data-gadget="camera")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun")
+                +e.P.item-text LIFX Mini Day & Dusk A60 E27
+                +e.SMALL.clarify-text Выключится в 17:00
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="Xiaomi Mi Air Purifier 2S"
+            data-gadget-status="Включено"
+            data-gadget-type="light"
+            data-gadget="camera")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun_2")
+                +e.P.item-text Xiaomi Mi Air Purifier 2S
+                +e.SMALL.clarify-text Включено
+        +e.LI.list-item
+            +e.BUTTON.card-button.card-item(
+            type="button"
+            data-gadget-name="Phillips Zhirui"
+            data-gadget-status="Выключено"
+            data-gadget-type="floor"
+            data-gadget="camera")
+                +e.item-icon
+                    +e.SVG.svg-icon(width="24" height="24")
+                        use(xlink:href="#icon_sun")
+                +e.P.item-text Phillips Zhirui
+                +e.SMALL.clarify-text Выключено
+

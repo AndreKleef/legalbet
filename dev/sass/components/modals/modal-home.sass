@@ -1,0 +1,249 @@
+@import ../../global/mixins
+@import ../../global/theme
+
+.modal-home
+    margin: auto
+    width: 630px
+    display: none
+
+    &_is_visible
+        display: block
+
+.modal-home__transparent-wrapper
+    background-color: #FFFFFF
+    padding-bottom: 25px
+    display: flex
+    flex-direction: column
+
+.modal-home__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 25px 25px 0 25px
+
+.modal-home__flex-wrapper
+
+.modal-home__title
+    @include offset
+    color: #333333
+
+.modal-home__status
+
+.modal-home__gadget-state
+
+.modal-home__icon
+    fill: transparent
+
+.modal-home__mode-list
+    @include offset
+    margin-top: 25px
+    display: flex
+
+.modal-home__mode-item
+    @include offset
+    margin-right: 15px
+    list-style: none
+
+    &:last-child
+        margin-right: 0
+
+.modal-home__mode-button
+    @include offset
+    border: none
+    background: none
+    padding: 8px 15px
+    border-radius: 15px
+    white-space: nowrap
+    cursor: pointer
+    background-color: #f7f7f7
+
+    &:hover
+        background-color: #ffd93e
+
+    &_current
+        background-color: #ffd93e
+
+.modal-home__progress
+    margin-top: 25px
+    position: relative
+    border-radius: 30px
+
+.modal-home__sunlight
+    position: absolute
+    color: #ffffff
+    font-size: 18px
+    font-weight: bold
+    z-index: 2
+
+.modal-home__termostate-wrapper
+    position: relative
+    width: 221px
+    margin: 0 auto
+
+.modal-home__temperature
+    color: #333333
+
+    &_size_big
+        position: absolute
+        font-size: 66px
+        left: 23%
+        top: 34%
+
+.modal-home__controls
+    margin-top: 15px
+
+.modal-home__control-button
+    border: none
+    text-align: center
+    border-radius: 15px
+    height: 60px
+    width: 300px
+    font-size: 18px
+    font-weight: bold
+
+    &_submit
+        background-color: #ffd93e
+
+    &_close
+        background-color: #ffffff
+        color: #333333
+
+.modal-home__range-wrapper
+    position: relative
+    align-self: center
+    margin-top: 40px
+
+.modal-home__range-input
+    width: 336px
+    margin: 0 auto
+    -webkit-appearance: none
+    height: 60px
+    outline: 0
+    border-radius: 30px
+    background-image: linear-gradient(-85deg, #FF9E00 2%, #FFE682 98%)
+
+    &_temperature
+        background-image: linear-gradient(-90deg, #F76B1C 2%, #FFD800 51%, #068FFF 100%)
+
+    @include toggleBarCustom
+        -webkit-appearance: none
+        width: 100%
+        cursor: pointer
+        background: transparent
+        border-color: transparent
+        color: transparent
+
+    @include toggleThumbCustom
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        box-shadow: 0 0 0 2px #ff8d10, 0 0 0 6px #ffffff
+        background: transparent
+        cursor: pointer
+
+@include rmin($mobile-width)
+    .modal-home__mode-list
+        overflow: auto
+        padding-left: 25px
+
+        @include toggleBarCustom
+            height: 4px
+
+    .modal-home__termostate
+        margin: 100px 0
+
+    .modal-home__range-wrapper
+        min-height: 336px
+
+    .modal-home
+        overflow: hidden
+        width: 320px
+
+    .modal-home__title
+        font-size: 18px
+
+    .modal-home__gadget-state
+        display: none
+
+    .modal-home__progress-toggle
+        left: 0
+        top: 40px
+
+    .modal-home__sunlight
+        left: 45%
+
+        &_offset_top
+            top: auto
+
+        &_min
+            bottom: 28px
+
+        &_max
+            top: 15px
+
+    .modal-home__control-button
+        width: 100%
+        margin-top: 20px
+
+        &:first-child
+            margin-top: 0
+
+    .modal-home__controls
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    .modal-home__range-input
+        transform: rotate(270deg) translateX(-125px)
+
+@include rmin($desktop-width)
+    .modal-home__controls
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+    .modal-home__termostate
+        margin: 20px 0
+
+    .modal-home__control-button
+        margin: 0
+        width: 300px
+
+    .modal-home__range-wrapper
+        min-height: auto
+
+    .modal-home
+        width: 630px
+
+    .modal-home__progress-toggle
+        left: 20px
+        top: auto
+
+    .modal-home__sunlight
+        top: 10px
+        left: auto
+
+        &_offset_top
+            top: 19px
+
+        &_min
+            left: 15px
+            bottom: auto
+
+        &_max
+            right: 15px
+
+    .modal-home__title
+        font-size: 27px
+
+    .modal-home__gadget-state
+        display: block
+
+    .modal-home__range-input
+        width: 580px
+        transform: rotate(0) translateX(0)
+        height: 60px
+        background-image: linear-gradient(-85deg, #FF9E00 2%, #FFE682 98%)
+
+        &_temperature
+            background-image: linear-gradient(-90deg, #F76B1C 2%, #FFD800 51%, #068FFF 100%)

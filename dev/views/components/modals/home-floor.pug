@@ -1,0 +1,20 @@
+include ../../../../node_modules/bemto.pug/bemto
+
++b.SECTION.modal-home._floor(class="zoomInLeft")
+    +e.transparent-wrapper
+        +e.HEADER.header
+            +e.flex-wrapper
+                +e.H2.title Xiaomi Warm Floor
+                +e.SMALL.status Включено
+            +e.gadget-state
+                +e.B.temperature +23
+                +e.SVG.icon(width="24" height="24")
+                    use(xlink:href="#icon_temperature_2")
+        +e.termostate
+            +e.termostate-wrapper
+                +e.B.temperature._size_big +23
+                picture
+                    +e.IMG.oval-image(src="images/Oval@1x.png" srcset="images/Oval@2x.png 2x")
+    +e.controls
+        +e.BUTTON.control-button._submit(type="button") Применить
+            +e.BUTTON.control-button._close(type="button") Закрыть

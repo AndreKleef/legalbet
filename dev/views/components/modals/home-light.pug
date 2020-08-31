@@ -1,0 +1,29 @@
+include ../../../../node_modules/bemto.pug/bemto
+
++b.SECTION.modal-home._light(class="zoomInLeft")
+    +e.transparent-wrapper
+        +e.header
+            +e.flex-wrapper
+                +e.H2.title Xiaomi Yeelight LED Smart Bulb
+                +e.SMALL.status Включится в 17:00
+            +e.gadget-state
+                +e.SVG.icon(width="36" height="36")
+                    use(xlink:href="#icon_sun")
+        +e.UL.mode-list
+            +e.LI.mode-item
+                +e.BUTTON.mode-button._current(type="button") Вручную
+            +e.LI.mode-item
+                +e.BUTTON.mode-button(type="button") Дневной свет
+            +e.LI.mode-item
+                +e.BUTTON.mode-button(type="button") Вечерний свет
+            +e.LI.mode-item
+                +e.BUTTON.mode-button(type="button") Рассвет
+        +e.range-wrapper
+            +e.SVG.sunlight._min(width="36" height="36")
+                use(xlink:href="#icon_sun_min")
+            +e.SVG.sunlight._max(width="36" height="36")
+                use(xlink:href="#icon_sun_max")
+            +e.INPUT.range-input(type="range" name="range" id="range" min="1" max="100")
+    +e.controls
+        +e.BUTTON.control-button._submit(type="button") Применить
+            +e.BUTTON.control-button._close(type="button") Закрыть

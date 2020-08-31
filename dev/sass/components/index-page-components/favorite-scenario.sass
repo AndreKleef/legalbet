@@ -1,0 +1,77 @@
+@import ../../global/mixins
+@import ../../global/theme
+
+.favorite-scenario
+    overflow: hidden
+
+.favorite-scenario__header
+    display: flex
+    justify-content: space-between
+
+.favorite-scenario__title
+    @include offset
+
+.favorite-scenario__list
+    @include offset
+    margin-top: 20px
+    display: grid
+    grid-gap: 15px
+
+.favorite-scenario__list-item
+    @include offset
+    display: flex
+    flex-direction: column
+    padding: 15px
+    list-style: none
+
+    &:hover
+        cursor: pointer
+        box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.50)
+        background-color: #FFFFFF
+
+.favorite-scenario__item-icon
+    margin-bottom: auto
+
+.favorite-scenario__svg-icon
+    fill: transparent
+
+.favorite-scenario__item-text
+    @include offset
+    font-size: 14px
+    color: #333333
+    font-weight: bold
+
+.favorite-scenario__clarify-text
+    font-size: 12px
+    margin-top: 5px
+    color: #858585
+
+@include rmin($mobile-width)
+    .favorite-scenario__list
+        overflow: auto
+        grid-auto-flow: column
+
+    .favorite-scenario__title
+        font-size: 18px
+
+        @include customScrollbar
+            height: 4px
+
+    .favorite-scenario
+        padding: 20px
+
+    .favorite-scenario__controls
+        display: none
+
+@include rmin($desktop-width)
+    .favorite-scenario__list
+        width: 630px
+        overflow: hidden
+        grid-template-rows: repeat(3, 1fr)
+        grid-template-columns: repeat(4, 200px)
+
+    .favorite-scenario
+        padding: 0
+
+    .favorite-scenario__controls
+        display: block

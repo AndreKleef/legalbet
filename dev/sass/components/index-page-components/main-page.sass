@@ -1,0 +1,25 @@
+@import ../../global/mixins
+@import ../../global/theme
+
+.main-page
+    max-width: 1366px
+    width: 100%
+    margin: 0 auto
+    flex-grow: 1
+
+.main-page__top-wrapper
+    display: flex
+    margin-top: 40px
+
+@include rmin($mobile-width)
+
+    .main-page
+
+    .main-page__top-wrapper
+        flex-direction: column
+
+@include rmin($desktop-width)
+
+    .main-page__top-wrapper
+        flex-direction: row
+

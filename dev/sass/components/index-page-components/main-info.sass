@@ -1,0 +1,204 @@
+@import ../../global/mixins
+@import ../../global/theme
+
+.main-info__title
+    @include offset
+
+.main-info__section
+    margin-top: 20px
+    background-image: url('../images/bg@1x.png')
+    background-color: #f0f0f0
+    background-attachment: local
+    border-radius: 20px
+    min-height: 282px
+    padding: 25px 0 25px 25px
+    display: flex
+    justify-content: space-between
+
+    @include retina
+        background-image: url('../images/bg@2x.png')
+
+.main-info__left-section
+
+.main-info__welcome-text
+    font-size: 27px
+    color: #333333
+
+.main-info__info-text
+    display: block
+    @include offset
+    margin-top: 6px
+
+.main-info__info-list
+    @include offset
+    display: flex
+    align-items: center
+
+.main-info__info-item
+    @include offset
+    display: flex
+    align-items: center
+    list-style: none
+    margin-right: 18px
+
+    &:last-child
+        margin-right: 0
+
+    & .main-info__item-wrapper
+        display: flex
+        flex-direction: column
+
+    & small
+        font-size: 14px
+        color: #858585
+
+    & b
+        color: #333333
+        letter-spacing: 0
+        text-align: left
+
+    & .main-info__info-icon
+        margin-top: 26px
+        margin-left: -16px
+
+.main-info__right-section
+    position: relative
+
+.main-info__gadget-info-list
+    @include offset
+
+.main-info__gadget-info-item
+    @include offset
+    list-style: none
+    padding: 15px
+    display: flex
+    flex-direction: column
+
+.main-info__gadget-icon-wrapper
+    margin-bottom: 15px
+
+.main-info__gadget-icon
+    fill: transparent
+
+.main-info__gadget-name
+    @include offset
+    margin-top: auto
+    width: 70%
+
+.main-info__gadget-info-time
+    display: block
+    margin-top: 4px
+    font-size: 12px
+    color: #858585
+    text-align: left
+
+.main-info__svg-arrow
+    width: 16px
+    height: 16px
+    margin: 0 auto
+
+.main-info__more-gadget-button
+    position: absolute
+    width: 200px
+    height: 40px
+    bottom: -48px
+    background-color: #f7f7f7
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    border: 0
+    font-size: 0
+
+@include rmin($mobile-width)
+    .main-info
+        padding: 0 20px 20px 20px
+
+    .main-info__title
+        display: none
+
+    .main-info__welcome-text
+        font-size: 18px
+
+    .main-info__info-text
+        font-size: 12px
+
+    .main-info__info-item
+
+        & b
+            font-size: 24px
+
+    .main-info__info-list
+        margin-top: 12px
+
+    .main-info__section
+        flex-direction: column
+        background-size: cover
+        height: 282px
+
+    .main-info__right-section
+        margin-top: 23px
+
+    .main-info__gadget-info-list
+        display: grid
+        overflow: auto
+        grid-auto-flow: column
+        grid-gap: 15px
+        justify-content: flex-start
+
+        @include customScrollbar
+            height: 4px
+
+    .main-info__gadget-info-item
+
+    .main-info__more-gadget-button
+        display: none
+
+    .main-info__svg-arrow
+        display: none
+
+@include rmin($desktop-width)
+    .main-info__svg-arrow
+        display: block
+
+    .main-info
+        padding: 0 40px 40px 40px
+
+    .main-info__info-list
+        width: 25px
+
+    .main-info__title
+        display: block
+
+    .main-info__section
+        flex-direction: row
+        padding-right: 25px
+        height: 330px
+
+    .main-info__right-section
+        overflow: auto
+
+        @include customScrollbar
+            width: 4px
+
+    .main-info__welcome-text
+        font-size: 27px
+
+    .main-info__info-item
+
+        & .main-info__info-icon
+            width: 26px
+            height: 26px
+            margin-top: 20px
+            margin-left: 5px
+
+        & b
+            font-size: 36px
+
+    .main-info__gadget-info-list
+        grid-auto-flow: row
+
+    .main-info__more-gadget-button
+        display: block
+
+    .main-info__gadget-info-item
+        margin-bottom: 15px
+        margin-right: 0

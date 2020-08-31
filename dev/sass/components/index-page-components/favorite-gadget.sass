@@ -1,0 +1,143 @@
+@import ../../global/mixins
+@import ../../global/theme
+
+.favorite-gadget
+    overflow: hidden
+    padding: 20px
+
+.favorite-gadget__header
+    display: flex
+    align-items: center
+
+.favorite-gadget__title
+    @include offset
+    white-space: nowrap
+    font-size: 18px
+    color: #333333
+
+.favorite-gadget__nav-list
+    @include offset
+    display: flex
+    margin-left: 15px
+    margin-right: auto
+
+.favorite-gadget__nav-item
+    @include offset
+    margin-right: 20px
+    list-style: none
+
+    &:last-child
+        margin-right: 0
+
+.favorite-gadget__nav-button
+    @include offset
+    border: none
+    font-weight: bold
+    background: none
+    padding: 8px 15px
+    border-radius: 15px
+    cursor: pointer
+    background-color: #f7f7f7
+
+    &:hover
+        background-color: #ffd93e
+
+    &_current
+        background-color: #ffd93e
+
+.favorite-gadget__list
+    @include offset
+    margin-top: 40px
+    display: grid
+    grid-gap: 15px
+    grid-template-columns: repeat(6, 200px)
+
+.favorite-gadget__list-item
+    @include offset
+    list-style: none
+
+.favorite-gadget__card-button
+    @include offset
+    border: none
+    outline: 0
+    cursor: pointer
+    padding: 15px
+    display: flex
+    flex-direction: column
+    text-align: unset
+
+    &:focus
+        background-color: #ffffff
+
+.favorite-gadget__item-icon
+    margin-bottom: auto
+
+.favorite-gadget__svg-icon
+    fill: transparent
+
+.favorite-gadget__item-text
+    @include offset
+    font-weight: bold
+    font-size: 14px
+    color: #333333
+
+.favorite-gadget__clarify-text
+    font-size: 12px
+    margin-top: 5px
+    display: block
+    color: #858585
+
+.favorite-gadget__nav-mobile-select
+    border: none
+    padding: 8px 15px
+    border-radius: 15px
+    background: url('../images/down-arrow.svg') no-repeat 76px #ffd93e
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+.favorite-gadget__nav-option
+
+@include rmin($mobile-width)
+    .favorite-gadget__list
+        overflow: auto
+        grid-template-columns: none
+        grid-auto-flow: column
+
+        @include customScrollbar
+            height: 4px
+
+    .favorite-gadget__nav-mobile-select
+        display: inline-block
+        margin-left: 50px
+        font-weight: bold
+        position: relative
+
+    .favorite-gadget__nav-option
+        background-color: #FFFFFF
+
+    .favorite-gadget__header
+
+    .favorite-gadget__nav-list
+        display: none
+
+    .favorite-gadget__controls
+        display: none
+
+@include rmin($desktop-width)
+    .favorite-gadget__header
+        justify-content: flex-start
+
+    .favorite-gadget__list
+        overflow: hidden
+        grid-template-columns: repeat(6, 200px)
+        width: 1280px
+
+    .favorite-gadget__nav-list
+        display: flex
+
+    .favorite-gadget__nav-mobile-select
+        display: none
+
+    .favorite-gadget__controls
+        display: block

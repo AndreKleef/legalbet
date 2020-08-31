@@ -1,0 +1,63 @@
+@import ../global/mixins
+@import ../global/theme
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+html,
+body
+    font-family: $font-main
+    color: $color-brand
+    height: 100%
+    word-wrap: break-word
+
+body
+    @include offset
+    font-size: 14px
+
+.main-app
+    height: 100vh
+    display: flex
+    min-width: 320px
+    flex-direction: column
+
+    &_blur
+        filter: blur(5px)
+
+a
+    text-decoration: none
+
+img
+    max-width: 100%
+    height: auto
+
+// sass-lint:disable no-vendor-prefixes
+::-webkit-scrollbar
+    width: $scrollbar-width
+
+// sass-lint:disable no-vendor-prefixes
+::-webkit-scrollbar-track
+    background-color: $scrollbar-track-color
+
+// sass-lint:disable no-vendor-prefixes
+::-webkit-scrollbar-thumb
+    background-color: $scrollbar-color
+
+// sass-lint:disable no-vendor-prefixes
+::selection
+    background: $color-selection-bg
+    color: $color-selection-text
+
+// sass-lint:disable no-vendor-prefixes
+::-moz-selection
+    background: $color-selection-bg
+    color: $color-selection-text
+
+// sass-lint:disable no-vendor-prefixes
+::-webkit-selection
+    background: $color-selection-bg
+    color: $color-selection-text
